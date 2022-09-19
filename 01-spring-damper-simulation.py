@@ -53,7 +53,7 @@ x_sim_euler = np.zeros((N+1, m_euler.Nx))
 u_sim = np.ones((N, m_rk4.Nu)) * 5.0
 
 for k in range(N):
-    # x_sim_rk4[k + 1] = m_rk4.simulate(u_sim[k])
+    x_sim_rk4[k + 1] = m_rk4.simulate(u_sim[k])
     x_sim_euler[k + 1] = m_euler.simulate(u_sim[k])
 
 
